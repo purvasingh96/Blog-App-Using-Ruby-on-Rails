@@ -43,3 +43,7 @@ Things you may want to cover:
 10. Use `resources` instead of GET, POST etc in `routes.rb`.
 11. Turbo Frames allow predefined parts of a page to be updated on request. Any links and forms inside a frame are captured, and the frame contents automatically updated after receiving a response.
 12. A concern is only responsible for a focused subset of the model's responsibility; the methods in our concern will all be related to the visibility of a model.
+
+## GraphQL Integration
+1. `bundle add graphql`
+2. While we use queries to fetch data, we use mutations to modify server-side data.
