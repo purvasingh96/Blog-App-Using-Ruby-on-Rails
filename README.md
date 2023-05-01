@@ -1,49 +1,15 @@
-# README
+# Blog App using Ruby on Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Overview
+This is a demo blog app made with Ruby on Rails. It allows you to create/edit/delete a post as well as to comment on these posts. You can also set the visibility of your comment as public/private/archived. I have used bootstrap to further enhance the user experience while using this web app. 
 
-Things you may want to cover:
+## Schema
+The post and comment have 1 to many active record association meaning 1 post can have many comments. In future I plan to incorporate advanced concepts such as polymorphic associations in this web app.<br>
+![ERD](./images/1.ERD.png)
 
-* Ruby version
+## Demo
+### Landing Page
+The landing page of this website for blogging enthusiasts is designed to make blogging a breeze. As soon as you log in, you can easily create new blog posts or access your existing ones, all from one page. The interface is user-friendly and intuitive, making it easy for even novice bloggers to get started. You can view all your posts in one place and have the option to edit or delete any post at any time. With the ability to manage and organize your content seamlessly, you can focus on creating engaging and captivating blog posts that will keep your readers coming back for more.
 
-* System dependencies
+![Landing Page](images/02. Landing page.png)
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-## Routes
-
-1. Routes are present in `./config/routes.rb`
-2. `get "/posts", controller: "posts", action: "index"` => declares `/posts` route, now declare controller called `posts_controller` which will render view `posts/index.html.erb`.
-3. Another way to write route is `get "/posts", to: "posts#index"`
-
-## Active Record Migrations
-1. Models can interact with the application's database through a feature of Rails called **Active Record**.
-2. Model names are **singular**. However, when we do a migrtaion, Ruby creates a class with plural name `CreatePosts`.
-3. Sample command to define model: `bin/rails generate model Article title:string body:text`. Other types of data types in Ruby are: `:primary_key, :string, :text, :integer, :float, :decimal, :datetime, :timestamp, :time, :date, :binary, :boolean, :references`.
-4. Main files we are concerned with: `db/migrate/<timestamp>_create_posts.rb` and `models/post.rb`.
-5. Migrations are used to alter the structure of an application's database.
-6. Now we run the command: `rails db:migrate`. After this command, it also updates the `db/schema.rb` file. Don't modify this file directly. Always create a new migration so that you can always rollback.
-7. Ruby uses **DSL (Domain Specific Language)** so that we dont have to write SQL ourselves.
-8. Perform migration by adding a column: `rails generate migration add_topic_to_posts topic:string`. Notice that we added `posts` instead of `post` here.
-9. Use `db:rollback` to revert.
-10. Use `resources` instead of GET, POST etc in `routes.rb`.
-11. Turbo Frames allow predefined parts of a page to be updated on request. Any links and forms inside a frame are captured, and the frame contents automatically updated after receiving a response.
-12. A concern is only responsible for a focused subset of the model's responsibility; the methods in our concern will all be related to the visibility of a model.
-
-## GraphQL Integration
-1. `bundle add graphql`
-2. While we use queries to fetch data, we use mutations to modify server-side data.
