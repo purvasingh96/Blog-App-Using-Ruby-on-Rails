@@ -4,12 +4,15 @@ class SessionsController < ApplicationController
   end
 
   def create
+    # lookup the user in the database
     @user = User.find_by(email: user_params[:email])
+
     if @user && @user.password == user_params[:password]
-      cookies[:user_id] = @user.id
+      #cookies.encrypted.signed[:user_id] = @user.id
+      session[:user_id]=@user.id
       redirect_to posts_path
-    else 
-      flash.now[:notice] = "Invalid Email or Password"
+    else
+      flash.now[:notice]="invalid username password"
       render :new
     end
   end

@@ -1,5 +1,7 @@
 <%= render 'layouts/navigation' %>
-
+<% if current_user %>
+  Hello <%= current_user.email %>
+<% end %>
 
 <h1 align="center">Listing all articles</h1>
 

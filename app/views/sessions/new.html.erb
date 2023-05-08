@@ -9,7 +9,7 @@
 <h1 align="center">Sign In!</h1>
 <div class="row">
 
-  <%= form_for @user, url: sessions_path, local:true, data: { turbo: false }, :html => {class: "form-horizontal", role: "form"}  do |f| %>
+  <%= form_for @user, url: sign_in_path, method: :post,  data: { turbo: false }, :html => {class: "form-horizontal", role: "form"}  do |f| %>
   
   <div class="form-group">
    <div class="control-label col-sm-2">
