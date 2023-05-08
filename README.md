@@ -1,5 +1,18 @@
 # Blog App using Ruby on Rails
 
+- [Blog App using Ruby on Rails](#blog-app-using-ruby-on-rails)
+  * [Overview](#overview)
+  * [Schema](#schema)
+  * [How to run this project locally?](#how-to-run-this-project-locally-)
+  * [Demo](#demo)
+    + [Landing Page](#landing-page)
+    + [Create New Blog Post](#create-new-blog-post)
+    + [View New Post](#view-new-post)
+    + [Publish New Post](#publish-new-post)
+    + [Delete Your Post](#delete-your-post)
+    + [Comments](#comments)
+    + [Archive Comment Example](#archive-comment-example)
+
 ## Overview
 This is a demo blog app made with Ruby on Rails. It allows you to create/edit/delete a post as well as to comment on these posts. You can also set the visibility of your comment as public/private/archived. I have used bootstrap to further enhance the user experience while using this web app. 
 
