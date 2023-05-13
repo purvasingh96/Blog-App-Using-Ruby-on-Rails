@@ -26,6 +26,9 @@ The post and comment have 1 to many active record association meaning 1 post can
 3. Run `rake db:migrate`
 4. Run `bin/rails server`
 
+## Authentication
+
+
 ## Demo
 ### Landing Page
 The landing page of this website for blogging enthusiasts is designed to make blogging a breeze. As soon as you log in, you can easily create new blog posts or access your existing ones, all from one page. The interface is user-friendly and intuitive, making it easy for even novice bloggers to get started. You can view all your posts in one place and have the option to edit or delete any post at any time. With the ability to manage and organize your content seamlessly, you can focus on creating engaging and captivating blog posts that will keep your readers coming back for more.

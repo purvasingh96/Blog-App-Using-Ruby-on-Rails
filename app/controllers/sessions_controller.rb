@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     # lookup the user in the database
     @user = User.find_by(email: user_params[:email])
 
-    if @user && @user.password == user_params[:password]
+    if @user && @user.is_password?(user_params[:password])
       #cookies.encrypted.signed[:user_id] = @user.id
       session[:user_id]=@user.id
       redirect_to posts_path
