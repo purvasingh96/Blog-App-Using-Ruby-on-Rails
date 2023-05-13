@@ -22,15 +22,34 @@
     <%= f.password_field :password, rows: 10, class: "form-control", placeholder: "Password" %>
     </div>
    </div>
+   <div class="form-group">
+    <div class="control-label col-sm-2">
+     <%= f.label :confirm_password %>
+    </div>
+    <div class="col-sm-6">
+     <%= f.password_field :password_confirmation, class: "form-control", placeholder: "Re-type Password", autofocus: true %>
+    </div>
+   </div>
+
+   <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= check_box_tag(:terms_of_service) %>
+      <%= label_tag(:terms_of_service, "I have read the terms and conditions") %>
+    </div>
+  </div>
 
 
   <div class="form-group">
    <div class="col-sm-offset-2 col-sm-10">
-    <%= f.submit 'Register', class: 'btn btn-primary btn-large' %>
-   </div>
-  </div>
-<% end %>
+      <%= f.submit 'Register', class: 'btn btn-primary btn-large' %>
+    </div>
+    </div>
+    <% end %>
+
+    
  </div>
+
+ 
 
  <div class="form-group">
     <div class="col-sm-offset-2 col-sm-6">
